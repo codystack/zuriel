@@ -1,0 +1,41 @@
+import React from 'react'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
+
+function Home() {
+  return (
+    <>
+    <Navbar />
+        {/*? slider Area Start*/}
+        <div className="slider-area position-relative">
+            <div className="slider-active">
+            {/* Single Slider */}
+            <div className="single-slider slider-height d-flex align-items-center">
+                <div className="container">
+                <div className="row">
+                    <div className="col-xl-7 col-lg-9 col-md-8 col-sm-9">
+                    <div className="hero__caption">
+                        <span>Committed to success</span>
+                        <h1 className="cd-headline letters scale">We care about your 
+                        <strong className="cd-words-wrapper">
+                            <b className="is-visible">health</b>
+                            <b>sushi</b>
+                            <b>steak</b>
+                        </strong>
+                        </h1>
+                        <p data-animation="fadeInLeft" data-delay="0.1s">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi uquip ex ea commodo consequat is aute irure.</p>
+                        <a href="#" className="btn hero-btn" data-animation="fadeInLeft" data-delay="0.5s">Appointment <i className="ti-arrow-right" /></a>
+                    </div>
+                    </div>
+                </div>
+                </div>          
+            </div>
+            </div>
+        </div>
+        {/* slider Area End*/}
+    <Footer />
+    </>
+  )
+}
+
+export default Home

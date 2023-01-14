@@ -1,58 +1,107 @@
-.our-services{    
-    .single-services{
-        padding: 79px 23px;
-        @media #{$lg}{
-			padding: 46px 23px;
-        }
-        @media #{$md}{
-			padding: 56px 32px;
-        }
-
-        @media #{$xs}{
-			padding: 47px 19px;
-        }
-        @media #{$sm}{
-			padding: 47px 19px;
-        }
-
+.service-area {
+    margin-top: -200px;
+    .single-cat{
+        background: $theme-color;
+        border-radius: 6px;
+        padding: 41px 22px;
         @include transition(.4s);
-        &:hover {
-            box-shadow: 0px 10px 30px 0px rgba(133, 66, 189, 0.1);
+        position: relative;
+        z-index: 1;
+        border-radius: 0 0 0 50px;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 0;
+            background:#6dc568;
+            transition: .6s;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            border-radius: 0 0 0 50px;
+
         }
-        .services-ion{
-            span{
-                font-size: 60px;
-                margin-bottom: 13px;
-                color: #000000;
-                margin-bottom: 16px;
-                display: block;
+        .cat-icon{
+            margin-bottom: 31px;
+            svg{
+
             }
         }
-        .services-cap{
-            padding: 0 16px;
-            @media #{$sm}{
-                padding: 0;
-            }
-            @media #{$md}{
-                padding: 0;
-            }
+        .cat-cap{
             h5{
-                a{
-                    font-weight: 600;
-                    font-size: 25px;
-                    color: #15181d;
-                    line-height: 1.4;
-                    margin-bottom: 19px;
-                    display: block;
+             & > a{
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 21px;
+                display: block;
+                @include transition(.2s);
+                font-family:$font_2;
+                color: #fff;
+                @media #{$sm}{
+                    font-size: 22px;
                 }
+                @media #{$xs}{
+                   font-size: 22px;
+                }
+              }
             }
             p{
-                color: #828282;
-                font-size: 14px;
+                margin-bottom: 36px;
+                color: #ffff;
+                font-size: 16px;
+                font-weight: 300;
+                @include transition(.2s);
+                @media #{$sm}{
+                    font-size: 15px;
+
+                }
+            }
+            a{
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                @include transition(.2s);
+            }
+            .plus-btn i {
+                width: 41px;
+                height: 41px;
+                color: #fff;
+                display: inline-block;
+                line-height: 38px;
+                border-radius: 30px;
+                border: 2px solid #fff;
+
             }
         }
-        &.active{
-            box-shadow: 0px 10px 30px 0px rgba(133, 66, 189, 0.1);
-        }
+
+
+        // Hover Effect In single 
+        &:hover{
+            &::before {
+                width:100%;
+            }
+            .cat-icon{
+            span{
+                color: $theme-color;
+                background:#fff;
+            }
+            }
+            .cat-cap{
+                h5{
+                    color: #fff;
+                }
+                p{
+                    color: #fff;
+                }
+                a{
+                    color: #fff;
+                }
+                .plus-btn i {
+                    border: 2px solid transparent;
+                    background: #fff;
+                    color: #000;
+                }
+            }
+       }
     }
 }

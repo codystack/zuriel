@@ -1,7 +1,10 @@
 //! Header left right padding
 .header-area {
     .main-header {
-        padding: 0px 130px;
+        &.main-header2{
+            padding: 0;
+        }
+        padding: 0px 35px;
         @media #{$laptop}{
             padding: 0px 30px;
         }
@@ -10,47 +13,62 @@
         }
         // mobile menu show
         @media #{$md}{
-            padding: 22px 50px;
+            padding: 19px 24px;
          }
         @media #{$sm}{
-            padding: 22px 20px;
+            padding: 19px 20px;
          }
         @media #{$xs}{
-            padding: 22px 14px;
+            padding: 19px 0px;
          }
-
+         .main-menu2 ul li:first-child a{
+            padding-left: 0;
+         }
+         .main-menu2 ul li a{
+            @media #{$md}{
+                padding: 17px 20px !important;
+             }
+            @media #{$sm}{
+                padding: 17px 20px !important;
+             }
+            @media #{$xs}{
+                padding: 17px 20px !important;
+             }
+         }
         //!  Menu
          .main-menu{
             @media #{$laptop}{
                margin-right: 30px;
             }
-            & ul{
-                & li{
+            ul{
+                li{
                     display: inline-block;
                     position: relative;
                     z-index: 1;
     
-                    & a{
-                        color: #102039;
-                        font-weight: 600;
-                        padding: 39px 27px;
+                    a{
+                        color: #112957;
+                        font-weight: 400;
+                        padding: 29px 27px;
                         display: block;
                         font-size: 16px;
                         @include transition(.3s);
                         text-transform: capitalize;
                         position: relative;
-                        font-family: $font_2;
+                        font-family: $font_1;
+                        text-decoration: underline #fff transparent;
                         @media #{$lg}{
-                            padding: 39px 15px;
+                            padding: 29px 15px;
                         }
                     }
                     &:hover{
                         & > a{
                             color:$theme-color;
+                            text-decoration: underline;
                         }
                     }
                 }
-                & ul.submenu{
+                ul.submenu{
                     position: absolute;
                     width: 170px;
                     background: rgba(255, 255, 255, 0.9);
@@ -139,14 +157,14 @@
             background: transparent;
             margin-top: 0px !important;
             .slicknav_btn {
-                top: -36px;
+                top: -34px;
                 // mobile Menu button color
                 .slicknav_icon-bar {
                     background-color: $theme-color !important;
                 }
             }
             .slicknav_nav{
-                margin-top: 15px !important;
+                margin-top: 13px !important;
                 // box-shadow: 0 0 10px 3px rgba(141, 140, 140, 0.5);
                 a:hover {
                     background: transparent;

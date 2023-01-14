@@ -1,116 +1,71 @@
-.home_blog-area{
-    .single-blogs{
-        .blog-img{
-            position: relative;
-            overflow: hidden;
-            border-radius: 5px 5px 0 0;
-            & img{
-                width: 100%;
-                transform: scale(1);
-                @include transition(.5s);
+// Home Page Blog
+.home-blog-area{
+    .home-blog-single{
+        @include transition(.4s);
+        .blog-img-cap{
+            .blog-img{
+                overflow: hidden;
+                position: relative;
+                margin-bottom: 20px;
+                border-radius: 50px;
+                img{
+                    width: 100%;
+                    @include transform(scale (1));
+                    transition: all 0.5s ease-out 0s;
+                }
             }
-        }
-        .blogs-cap{
-            background: #fcfcfc;
-            padding: 34px 22px 31px 37px;
-            @media #{$md}{
-                padding: 31px 12px 22px 17px;
-            }
-            @media #{$lg}{
-                padding: 31px 12px 22px 17px;
-            }
-            @media #{$sm}{
-                padding: 31px 12px 22px 17px;
-            }
-            @media #{$xs}{
-                padding: 31px 12px 22px 17px;
-            }
-            .date-info{
-                span {
+            .blog-cap{
+                span{
+                    color:#0D210B;
+                    font-size: 16px;
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 13px;
                     display: inline-block;
-                    margin-right: 14px;
-                    padding-right: 14px;
-                    line-height: 1;
-                    margin-bottom: 16px;
-                    color: #5191ff;
-                    position: relative;
-                    font-size: 14px;
-                    &::before{
-                        position: absolute;
-                        content: "";
-                        width: 4px;
-                        height: 4px;
-                        background: #515050;
-                        top: 50%;
-                        border-radius: 50%;
-                        transform: translateY(-50%);
-                        right: -3px;
+                }
+                h3{
+                    a{
+                        font-size: 24px;
+                        font-weight: 400;
+                        line-height: 1.4;
+                        margin-bottom: 20px;
+                        font-family: $font_2;
+                        display: block;
+                        text-decoration:underline #fff transparent;
+                        &:hover{
+                            color: $theme-color;
+                            text-decoration:underline;
+                        }
+                        @media #{$md}{
+                            font-size: 19px;
+                        }
+                        @media #{$sm}{
+                            font-size: 19px;
+                        }
+                        @media #{$xs}{
+                            font-size: 19px;
+                        }
                     }
                 }
                 p{
-                    display: inline-block;
-                    color: #aebccb;
-                    font-size: 14px;
+                    color: #234821;
+                    font-weight: 300;
+                    font-size: 17px;
                 }
-    
-            }
-             h4{
-                a{
-                    color: #112957;
-                    font-size: 24px;
-                    font-weight: 800;
-                    line-height: 1.4;
-                    margin-bottom: 20px;
-                    @media #{$lg}{
-                        font-size: 20px;
-                     }
-                     @media #{$xs}{
-                        font-size:20px;
-                    }
-                    &:hover{
-                        color: #112957;
-                    }
-                }
-
-            }
-             p{
-                color: #64676c;
-                line-height: 1.7;
-            }
-            .read-more1{
-                color:#c4c4c4;
-                font-size: 16px;
-                font-weight: 500;
             }
         }
     }
+}
 
-    // hover Effect
-    .single-blogs:hover{
-        .blog-img {
-            & img{
-                transform: scale(1.1);
-                -webkit-transform: scale(1.1);
-                -moz-transform: scale(1.1);
-                -ms-transform: scale(1.1);
-                -o-transform: scale(1.1);
+.home-blog-single:hover{
+    .blog-img img{
+        @include transform(scale(1.05));
     }
-            .practice-icon{
-                & span{
-                    color: $theme_color;
-                }
-            }
-        }
-        .read-more1{
-            color:$theme_color;
-        }
-    } 
 }
 
 
 /* Start Blog Area css
 ============================================================================================ */
-
 
 .latest-blog-area {
     .area-heading {

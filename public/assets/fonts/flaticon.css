@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 27/07/2019 04:58
+  	Creation date: 13/05/2020 06:02
   	*/
 
 @font-face {
@@ -30,6 +30,6 @@ font-style: normal;
 margin-left: 20px;
 }
 
-.flaticon-left-arrow:before { content: "\f100"; }
-.flaticon-right-arrow:before { content: "\f101"; }
-.flaticon-play-button:before { content: "\f102"; }
+.flaticon-healthcare-and-medical:before { content: "\f100"; }
+.flaticon-fitness:before { content: "\f101"; }
+.flaticon-clock:before { content: "\f102"; }

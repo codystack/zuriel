@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 14/01/2020 06:46
+  	Creation date: 13/05/2020 06:02
   	*/
 
 @font-face {
@@ -28,14 +28,6 @@
 font-style: normal;
 }
 
-.flaticon-verified:before { content: "\f100"; }
-.flaticon-teeth:before { content: "\f101"; }
-.flaticon-cardiovascular:before { content: "\f102"; }
-.flaticon-ear:before { content: "\f103"; }
-.flaticon-bone:before { content: "\f104"; }
-.flaticon-lung:before { content: "\f105"; }
-.flaticon-cell:before { content: "\f106"; }
-.flaticon-doctor:before { content: "\f107"; }
-.flaticon-find:before { content: "\f108"; }
-.flaticon-customer-service:before { content: "\f109"; }
-.flaticon-call:before { content: "\f10a"; }
+.flaticon-healthcare-and-medical:before { content: "\f100"; }
+.flaticon-fitness:before { content: "\f101"; }
+.flaticon-clock:before { content: "\f102"; }

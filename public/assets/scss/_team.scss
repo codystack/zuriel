@@ -1,85 +1,66 @@
 .team-area{
-    .single-team{
-        .team-img{
-            overflow: hidden;
+    @media #{$xs}{
+        padding-top: 50px;
+    }
+    .single-cat{
+        @include transition(.4s);
+        z-index: 1;
+        .cat-icon{
             img{
-                width: 100%;
-                transform:scale(1);
-                transition: all 0.6s ease-out 0s;
+                margin: 0 auto;
+                margin-bottom: 40px;
             }
         }
-        .team-caption{
-            padding: 30px 20px 30px 50px;
-            background: #fff;
-            border: 1px solid #ffeff9;
-            border-top: 0;
-            @include transition(.4s);
+        .cat-cap{
             span{
-                color: #a5a5a5;
-                font-size: 14px;
-                font-weight: 300;
-                font-family:$font_1;
+                font-size: 46px;
+                font-weight: 600;
+                margin-bottom: 10px;
                 display: block;
-                margin-bottom: 30px;
             }
-            h3{
-                a{
-                    color: #161e46;
-                    font-weight: 700;
-                    font-size: 25px;
-                    margin-bottom: 10px;
-                    display: block;
+            h5{
+             & > a{
+                font-size: 24px;
+                font-weight: 400;
+                margin-bottom: 14px;
+                display: block;
+                @include transition(.2s);
+                text-transform: normal;
+                @media #{$sm}{
+                    font-size: 21px;
+                }
+                @media #{$xs}{
+                    font-size: 23px;
+                }
+              }
+            }
+            p{
+                font-size: 17px;
+                @include transition(.2s);
+                margin: 0;
+                color: #234821;
+                @media #{$sm}{
+                    font-size: 15px;
+                }
+                @media #{$lg}{
+                    font-size: 14px;
                 }
             }
-            &:hover{
-                border: 1px solid transparent;
-                border-top: 0;
-                @include transition(.4s);
-                background: rgb(15,102,248);
-                span{
-                    color: #fff;
-                }
-                h3{
-                    a{
-                        color: #fff;
-                    }
-                }
-                .team-social{
-                    a{
-                        color: #fff;
-                        border: 1px solid #fff;
-                    }
-                }
+            a{
+                font-size: 16px;
+                font-weight: 600;
+                @include transition(.2s);
+                color: $heading-color;
             }
         }
-    }
-}
-.single-team:hover .team-img img {
-	transform:scale(1.05);
-}
+        // Hover Effect In single 
+        &:hover{
+            .cat-cap{
+                h5{
+                    color: #000;
+                }
 
-.brand-area{
-    background:#f7f7f7;
-    .single-brand.slick-slide {
-        opacity: .7;
-    }
-}
-
-// footer social
-.team-social{
-    a{
-        color: #9fa8c3;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        font-size: 14px;
-        line-height: 40px;
-        display: inline-block;
-        text-align: center;
-        margin-right: 8px;
-        border: 1px solid #fff5fb;
-        i{
-                display:inline-block;
-        }
+            }
+       }
     }
 }

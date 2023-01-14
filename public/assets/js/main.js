@@ -106,53 +106,53 @@
     }
     mainSlider();
 
-/* 5. Testimonial Active*/
 
-/* 4. Testimonial Active*/
-    var testimonial = $('.h1-testimonial-active');
-    if(testimonial.length){
-    testimonial.slick({
-        dots: false,
-        infinite: true,
-        speed: 1000,
-        autoplay:false,
-        loop:true,
-        arrows: false,
-        prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: false,
-              arrow:false
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows:false
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows:false,
-            }
+      
+  /* 4. Testimonial Active*/
+  var testimonial = $('.h1-testimonial-active');
+  if(testimonial.length){
+  testimonial.slick({
+      dots: true,
+      infinite: true,
+      speed: 1000,
+      autoplay:true,
+      loop:true,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><i class="ti-arrow-top-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="ti-arrow-top-right"></i></button>',
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+            arrows:true
           }
-        ]
-      });
-    }
-
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows:true
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots:false
+          }
+        }
+      ]
+    });
+  }
 
 
 /* 6. Nice Selectorp  */
@@ -200,40 +200,16 @@
       delay: 10,
       time: 3000
     });
-    /*------------------
-        CountDown
-    --------------------*/
-    // For demo preview
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-    if(mm == 12) {
-        mm = '01';
-        yyyy = yyyy + 1;
-    } else {
-        mm = parseInt(mm) + 1;
-        mm = String(mm).padStart(2, '0');
-    }
-    var timerdate = mm + '/' + dd + '/' + yyyy;
-    // For demo preview end
-    
 
-    // Use this for real timer date
-    /*  var timerdate = "2020/01/01"; */
-
-	$("#countdown").countdown(timerdate, function(event) {
-        $(this).html(event.strftime("<div class='cd-item'><span>%D</span><p>Days</p> </div>" + "<div class='cd-item'><span>%H</span><p>Hrs</p> </div>" + "<div class='cd-item'><span>%M</span><p>Min</p> </div>" + "<div class='cd-item'><span>%S</span><p>Sec</p> </div>"));
-    });
-
-
-
-    
 /* 14. Datepicker */
   $('#datepicker1').datepicker();
 
 // 15. Time Picker
   $('#timepicker').timepicker();
 
+//16. Overlay
+  $(".snake").snakeify({
+    speed: 200
+  });
 
 })(jQuery);
